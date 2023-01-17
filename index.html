@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://unpkg.com/petite-vue" defer init></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Endercat's Recipes</title>
+
+    <!-- Set theme here to avoid FOUC -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
-<body>
+<body class="bg-white dark:bg-gray-700">
     <header class="flex flex-col">
         <!-- lg+ -->
         <div class="relative bg-gray-900 z-50">
@@ -22,7 +30,7 @@
                     <!-- Logo -->
                     <div class="flex-shrink-0">
                         <a href="#" title="" class="flex">
-                            <img class="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo-alt.svg" alt="" />
+                            <img class="w-auto h-8 lg:h-10" src="images/logo_alt.svg" alt="" />
                         </a>
                     </div>
     
