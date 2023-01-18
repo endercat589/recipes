@@ -13,60 +13,82 @@
 
     <title>Endercat's Recipes</title>
 
-    <!-- Set theme here to avoid FOUC
-    <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script> -->
 </head>
-<body class="bg-white dark:bg-gray-700">
-    <header class="flex flex-col">
-        <!-- lg+ -->
-        <div class="relative bg-gray-900 z-50">
+<body class="max-w-screen overflow-hidden overflow-y-auto">
+    <header class="flex flex-col sticky top-0 z-50">
+        <!-- navbar -->
+        <div class="relative bg-gray-900">
 
-            <div class="relative px-4 mx-auto sm:px-6 md:px-8">
-                <nav class="flex items-center justify-between h-16 lg:h-20">
+            <div class="relative px-6 mx-auto sm:px-8 md:px-12 transition-all duration-500">
+                <nav class="flex items-center justify-between h-16 md:h-20">
 
                     <!-- Logo -->
                     <div class="flex-shrink-0">
                         <a href="#" title="" class="flex">
-                            <img class="w-auto h-8 lg:h-10" src="images/logo_alt.svg" alt="" />
+                            <img class="w-auto h-8 md:h-10" src="images/logo_alt.svg" alt="" />
                         </a>
                     </div>
     
                     <!-- Mobile nav toggle button -->
-                    <button type="button" class="inline-flex p-3 text-white transition-all duration-200 rounded-md md:hidden hover:bg-gray-800">
+                    <button onclick="toggleMobileNav()" type="button" class="inline-flex p-3 text-white transition-all duration-200 rounded-md md:hidden hover:bg-gray-800">
                         <i class="fa-solid fa-bars"></i>
                     </button>
     
-                    <!-- Top navigation -->
+                    <!-- Top navigation (desktop) -->
                     <div class="hidden md:flex md:items-center md:space-x-10">
                         <a href="#" title="" class="text-base font-medium text-white"> Home </a>
                         <a href="#" title="" class="text-base font-medium text-white"> About </a>
                         <a href="#" title="" class="text-base font-medium text-white"> Recipes </a>
-
                     </div>
-    
+
+                    <!-- Socials -->
                     <div class="hidden md:flex md:items-center md:space-x-2">
-                        <!-- Contact button desktop -->
-                        <a href="#" title="" class="px-2 py-2 text-base text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button">
+                        <!-- Github button desktop -->
+                        <a title="" class="px-2 py-2 text-base text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button" href="#">
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        
-                        <!-- Theme button desktop -->
-                        <a onclick="cycleTheme()" href="javascript:void(0)" title="" class="items-center justify-center hidden px-2 py-2 text-base font-semibold text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button">
-                            <i class="fa-solid fa-sun" id="theme_indicator"></i>
+                        <!-- Itch button desktop -->
+                        <a title="" class="px-2 py-2 text-base text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button" href="#">
+                            <i class="fa-brands fa-itch-io"></i>
                         </a>
+                        <!-- Youtube button desktop -->
+                        <a title="" class="px-2 py-2 text-base text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button" href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        
                     </div>
                 </nav>
             </div>
         </div>
     
         <!-- Mobile navigation -->
-        
+        <div id="mobile_nav" class="absolute bg-gray-800 w-screen h-[calc(100vh-4rem)] h-0 overflow-hidden top-16 right-0 transition-all duration-500 md:hidden">
+            <nav class="w-full h-full flex flex-col justify-around">
+                <!-- Pages -->
+                <div class="flex flex-col m-4 text-center space-y-3">
+                    <a href="#" title="" class="text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> Home </a>
+                    <a href="#" title="" class="text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> About </a>
+                    <a href="#" title="" class="text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> Recipes </a>
+                </div>
+
+                <!-- Socials -->
+                <div class="flex items-center justify-center space-x-5 p-8">
+                    <!-- Github button desktop -->
+                    <a href="https://github.com/endercat589/recipes" title="" class="px-3 py-2 text-xl text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <!-- Itch button desktop -->
+                    <a href="#" title="" class="px-3 py-2 text-xl text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button">
+                        <i class="fa-brands fa-itch-io"></i>
+                    </a>
+                    <!-- Youtube button desktop -->
+                    <a href="#" title="" class="px-3 py-2 text-xl text-black transition-all duration-200 bg-violet-400 border border-transparent rounded-full md:inline-flex hover:bg-violet-500 focus:bg-violet-500" role="button">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    
+                </div>
+            </nav>
+        </div>
 
         <!-- <nav class="flex flex-col justify-between w-full max-w-xs min-h-screen px-4 py-10 bg-black sm:px-6 md:hidden">
             <button type="button" class="inline-flex p-2 text-white transition-all duration-200 rounded-md focus:bg-gray-800 hover:bg-gray-800">
@@ -93,6 +115,38 @@
         </nav> -->
     </header>
     
+    <section id="hero" class="transition-all duration-500 max-w-screen flex h-48 md:h-64 drop-shadow-lg bg-cover bg-[url('images/hero_background.png')]">
+        <!-- Hero text -->
+        <div class="flex items-center justify-center w-full">
+            <a href="#" title="" class="text-3xl sm:text-5xl font-medium text-white text-center uppercase transition-all duration-500">
+                Endercat's Recipes
+            </a>
+        </div>
+    </section>
+
+    <section id="content" class="flex m-16">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et sequi tempora molestiae provident deserunt doloribus quis nesciunt nisi ducimus iusto aut odit impedit, corrupti fuga aperiam non inventore dignissimos, vero cum est? Ea quidem autem aliquid amet? Exercitationem quas necessitatibus id provident animi iure alias accusantium dignissimos accusamus neque dolorem eos natus, aspernatur voluptate dolores unde impedit laborum aperiam corporis temporibus, sequi eveniet expedita! Nostrum dolores pariatur necessitatibus fuga accusamus fugiat nulla dicta reiciendis facere repudiandae eius, ipsam molestiae id qui commodi alias, mollitia maxime aperiam sit. Tempore ad consequuntur sit dolor molestiae dolorem magni nesciunt repellat exercitationem molestias perferendis reprehenderit, autem nulla hic atque, consequatur nisi! Odio, harum! At voluptate ducimus omnis ipsum ipsam mollitia repellendus, deserunt itaque consequuntur nesciunt ratione totam hic delectus dolor odio cupiditate excepturi, architecto blanditiis similique! Id exercitationem quibusdam rerum expedita voluptates cumque aspernatur voluptate sapiente. Doloribus dignissimos nesciunt praesentium nulla! Laboriosam optio deleniti nulla incidunt, possimus cumque ut cupiditate aspernatur dolor, provident ea vel inventore, suscipit mollitia accusantium? Dolore fugit aliquam ducimus modi alias. Eum, nostrum? Unde debitis at quaerat soluta neque inventore, facere maxime quia atque aperiam suscipit nisi optio, corporis saepe. Quos eveniet alias placeat id eos sit, maxime, fuga laboriosam, quibusdam velit iusto magnam ex est maiores distinctio sapiente cum ipsam! Illum libero sunt praesentium animi iste dolorem quibusdam saepe tenetur quaerat delectus, ea esse possimus corrupti voluptatibus dignissimos ipsam id! Vel perferendis itaque molestiae delectus hic sunt quos dolorem incidunt voluptatum doloremque eius voluptates, ut culpa praesentium libero aliquam velit esse laborum ex, nesciunt ad. Hic nostrum aliquid neque, voluptatem sit quae totam, dolore modi porro, odit repellat veritatis maiores nobis aperiam cupiditate provident! Cum commodi est, nostrum officia accusamus alias atque suscipit maxime a quod aperiam. Quae odio voluptatibus blanditiis quos deserunt repellendus porro optio laborum praesentium, repellat nulla inventore numquam? Iusto a maxime expedita ipsa tempora nobis dolor adipisci, laborum provident! Laboriosam, voluptas nesciunt dolore architecto amet commodi animi quam sapiente dolor velit eos id incidunt in earum officia hic ipsa sit cum nisi ullam asperiores sed ipsam eaque porro. Reprehenderit eum consequatur quidem temporibus voluptatum sed odio ullam sint quae accusamus? Est eum praesentium animi laudantium soluta tempore ullam illo delectus eos dicta, quibusdam minima sed. Mollitia consectetur accusantium maxime quasi magnam optio a, aliquam totam fugiat sequi quis voluptas doloremque distinctio rerum possimus quia ratione sit odio qui impedit dicta minima voluptates laboriosam dignissimos? Ipsam mollitia pariatur minus voluptatibus quis consequuntur doloremque animi facere tempora recusandae, molestiae quaerat hic, eius molestias nesciunt eaque repellat dolorum perferendis corrupti itaque repudiandae? In voluptate ipsum, earum illum nostrum esse ea amet aliquid aut dignissimos quisquam vero ipsa magnam delectus maiores voluptatum ratione laudantium! Iste illo inventore soluta! Perferendis quos similique dolorum at dolores officia sunt libero. Error, eveniet nobis recusandae rerum quod nemo. Amet, dolores tempore. Officia provident accusamus in beatae unde itaque optio quo vitae expedita laudantium. Blanditiis quae voluptate, neque aut soluta ducimus veritatis ea fugit quidem dolore recusandae! Deserunt ut consequatur, hic vero, corrupti inventore deleniti cumque fugiat consectetur excepturi voluptates, accusamus optio suscipit quisquam aliquam doloremque ratione officiis atque blanditiis accusantium esse dicta illo. Veritatis numquam nulla labore nobis voluptates, odit molestias eos necessitatibus? Magni sunt recusandae perferendis veniam tempora soluta, repellendus porro. Illo unde aspernatur impedit, architecto, corrupti similique incidunt nobis beatae dolorem, eveniet consequatur libero! Quis tempore ipsam quisquam repellendus ut voluptatum! Ipsa impedit similique excepturi esse alias quis mollitia autem aut nulla consequuntur natus voluptas deleniti dolorem vel dolor, animi soluta unde officia dolores veritatis omnis laborum perferendis totam. Necessitatibus nisi iusto distinctio saepe quos repudiandae ut. Esse mollitia corporis, dignissimos aliquam accusantium libero saepe illum eveniet, vero, distinctio tempora laboriosam voluptates modi sed atque eligendi? Soluta quae quam earum illo dolorem eos libero quidem dolorum vitae, necessitatibus aperiam non, odit asperiores! Doloremque molestiae exercitationem iure, corrupti quae nostrum inventore delectus quis fuga ducimus facilis incidunt quibusdam, maiores laborum maxime hic expedita veritatis ullam debitis. Accusamus sunt maiores labore incidunt. Corporis quibusdam minima consequatur, deserunt dolorum unde quasi vel. Repudiandae, asperiores? Sequi, ut ducimus! Earum saepe maiores fugiat pariatur est explicabo nihil accusantium, ullam inventore dignissimos dolor voluptatum molestiae, magni ipsa adipisci fuga laudantium iste magnam harum. Iusto ut temporibus est, velit quis pariatur labore fuga, eum quas minus ipsa? Reiciendis quibusdam nemo repudiandae et placeat praesentium libero repellat nam ipsa ullam. Doloremque delectus reiciendis nemo quasi quae suscipit corrupti cum ut blanditiis quia veritatis culpa facilis quidem illo voluptates odio quam, debitis laudantium? Atque, id sint molestiae asperiores molestias maxime voluptas aliquid quaerat labore natus perferendis praesentium quos provident quod fugit deserunt voluptatum. Delectus, quisquam? Totam aliquam quis amet placeat ullam, aliquid adipisci voluptates quisquam cumque laborum, quos, laudantium dicta cupiditate nobis! Iste praesentium laudantium excepturi eligendi sint cupiditate itaque sed sunt, voluptatibus quidem ipsam quos exercitationem facilis veritatis dolorem.
+    </section>
+
+    <footer id="footer" class="w-screen flex flex-col bg-gray-800 h-24 bottom-0 justify-center">
+        <!-- Made with -->
+        <div class="flex flex-row justify-center">
+            <h1 class="text-white">
+                <span>Made with </span>
+                <i class="fa-solid fa-heart text-violet-300"></i>
+                <span> by Endercat126</span>
+            </h1>
+        </div>
+
+        <!-- License -->
+        <div class="flex flex-row justify-around">
+            <h1 class="text-white">
+                <span>This project uses </span>
+                <a href="#" class="text-blue-400 underline">these</a>
+                <span> open-source libraries</span>
+            </h1>
+        </div>
+    </footer>
 
     <script>
         // run after page load
