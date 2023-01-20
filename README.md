@@ -5,6 +5,11 @@
 ![](https://img.shields.io/github/license/endercat589/recipes?color=%239966ff&style=for-the-badge)
 ![](https://img.shields.io/github/deployments/endercat589/recipes/github-pages?label=deployment&style=for-the-badge)
 
+- ⚡ blazingly fast
+- 🩸 bleeding edge
+- 🌱 holistic approach
+- 🤯 gamechanging
+
 ### Website URL
 > https://endercat589.github.io/recipes/
 
