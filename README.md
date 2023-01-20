@@ -1,4 +1,7 @@
-![](https://raw.githubusercontent.com/endercat589/recipes/main/images/logo_alt.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/endercat589/recipes/main/images/logo_alt.svg">
+  <img alt="Endercat's Recipes" src="https://raw.githubusercontent.com/endercat589/recipes/main/images/logo.svg">
+</picture>
 
 ![](https://img.shields.io/github/languages/code-size/endercat589/recipes?style=for-the-badge)
 ![](https://img.shields.io/website?down_color=red&down_message=offline&label=site&style=for-the-badge&up_color=%2366cc00&up_message=online&url=https%3A%2F%2Fendercat589.github.io%2Frecipes%2F)
