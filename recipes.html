@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 
     <!-- Embed -->
     <meta content="Endercat's Recipes" property="og:title" />
@@ -33,8 +33,8 @@
 
                     <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <a href="#" title="" class="flex">
-                            <img class="w-auto h-8 md:h-10" src="images/logo_alt.svg" alt="" />
+                        <a href="./index.html" title="" class="flex">
+                            <img class="w-auto h-8 md:h-10" src="./images/logo_alt.svg" alt="" />
                         </a>
                     </div>
     
@@ -45,9 +45,9 @@
     
                     <!-- Top navigation (desktop) -->
                     <div class="hidden md:flex md:items-center md:space-x-10">
-                        <a href="index.html" title="" class="hover:text-gray-500 hover:border-gray-700 text-base font-medium text-white transition-all duration-200"> Home </a>
-                        <a href="about.html" title="" class="hover:text-gray-500 hover:border-gray-700 text-base font-medium text-white transition-all duration-200"> About </a>
-                        <a href="#" title="" class="border-b-2 hover:text-gray-400 hover:border-gray-700 text-base font-medium text-white transition-all duration-200"> Recipes </a>
+                        <a href="./index.html" title="" class="hover:text-gray-400 hover:border-b-2 hover:border-gray-500 text-base font-medium text-white transition-all duration-200"> Home </a>
+                        <a href="./about.html" title="" class="hover:text-gray-400 hover:border-b-2 hover:border-gray-500 text-base font-medium text-white transition-all duration-200"> About </a>
+                        <a href="./recipes.html" title="" class="border-b-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-500 text-base font-medium text-white transition-all duration-200"> Recipes </a>
                     </div>
 
                     <!-- Socials -->
@@ -75,9 +75,9 @@
             <nav class="w-full h-full flex flex-col justify-around">
                 <!-- Pages -->
                 <div class="flex flex-col m-0 text-center space-y-3">
-                    <a href="index.html" title="" class="text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> Home </a>
-                    <a href="about.html" title="" class="text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> About </a>
-                    <a href="#" title="" class="bg-gray-600 text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> Recipes </a>
+                    <a href="./index.html" title="" class="text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> Home </a>
+                    <a href="./about.html" title="" class="text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> About </a>
+                    <a href="./recipes.html" title="" class="bg-gray-600 text-xl font-medium text-white hover:bg-gray-700 p-8 hover:text-2xl transition-all duration-500"> Recipes </a>
                 </div>
 
                 <!-- Socials -->
@@ -124,7 +124,7 @@
         </nav> -->
     </header>
     
-    <section id="hero" class="transition-all duration-500 max-w-screen flex h-48 md:h-64 drop-shadow-lg bg-cover bg bg-yellow-900 bg-center bg-[url('images/hero_bg_recipes.png')]">
+    <section id="hero" class="transition-all duration-500 max-w-screen flex h-48 md:h-64 drop-shadow-lg bg-center bg-cover bg-[url('./images/hero_bg_recipes.png')]">
         <!-- Hero text -->
         <div class="flex items-center justify-center w-full">
             <a href="#" title="" class="text-3xl sm:text-5xl font-medium text-white text-center uppercase transition-all duration-500">
@@ -134,27 +134,27 @@
     </section>
 
     <section id="content" class="flex flex-col m-8 sm:m-16 text-center space-y-12 xl:items-center">
-        <!-- <a href="#">
-            <div class="flex flex-col sm:flex-row-reverse justify-between text-left sm:space-x-0 space-y-8 sm:space-y-0 p-8 hover:drop-shadow-xl hover:bg-gray-100 hover:m-2 hover:border-2 border-violet-300 transition-all duration-500">
-                <div class="flex h-48 max-h-full overflow-hidden">
-                    <img class="object-scale-down" src="images/endercat.png" alt="">
+        <a href="./about.html">
+            <div class="flex flex-col sm:flex-row justify-between text-left sm:space-x-0 space-y-8 sm:space-y-0 p-8 rounded-lg hover:bg-gray-100 hover:scale-105 border-violet-300 transition-all duration-500 items-center xl:max-w-[75rem] xl:w-screen">
+                <div class="flex w-64 max-h-72 overflow-hidden rounded-lg">
+                    <img class="object-scale-down" src="./images/endercat.png" alt="">
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col px-8">
                     <h1 class="text-2xl">Endercat's Recipes</h1>
                     <br>
-                    <p>hello im endercat. here is my favourite recipes i make!</p>
+                    <p>Hello, I'm Endercat. I'm very good at cooking and I make the fanciest feasts. Here are some of my favourite recipes!</p>
                 </div>
             </div>
-        </a> -->
+        </a>
 
-        <a href="recipes/beef_curry.html">
-            <div class="flex flex-col sm:flex-row-reverse justify-between text-left sm:space-x-0 space-y-8 sm:space-y-0 p-8 hover:drop-shadow-xl hover:bg-gray-100 hover:m-2 hover:border-2 border-violet-300 transition-all duration-500 items-center xl:max-w-[75rem] xl:w-screen">
-                <div class="flex w-64 max-h-72 overflow-hidden">
-                    <img class="object-scale-down" src="images/beef_curry.jpg" alt="">
+        <a href="./recipes/beef_curry.html">
+            <div class="flex flex-col sm:flex-row-reverse justify-between text-left sm:space-x-0 space-y-8 sm:space-y-0 p-8 rounded-lg hover:bg-gray-100 hover:scale-105 border-violet-300 transition-all duration-500 items-center xl:max-w-[75rem] xl:w-screen">
+                <div class="flex w-64 max-h-72 overflow-hidden rounded-lg">
+                    <img class="object-scale-down" src="./images/beef_curry.jpg" alt="">
                 </div>
                 <div class="flex flex-col px-8">
                     <h1 class="text-2xl">
-                        <span class="px-4 py-2 bg-violet-400" >New!</span>
+                        <span class="px-4 py-2 bg-violet-400 rounded-full" >New!</span>
                         <span class="mx-2">Beef Curry</span>
                     </h1>
                     <br>
@@ -172,8 +172,7 @@
             <h1 class="text-white">
                 <span>Made with </span>
                 <span class="group">
-                    <i class="fa-solid fa-fish text-violet-300 group-hover:hidden transition-all duration-200"></i>
-                    <i class="fa-solid fa-cat text-green-300 hidden group-hover:inline transition-all duration-200"></i>
+                    <i class="fa-solid fa-fish text-violet-300 transition-all duration-500 text-lg"></i>
                 </span>
                 <span> by Endercat126</span>
             </h1>
@@ -182,9 +181,9 @@
         <!-- License -->
         <div class="flex flex-row justify-around">
             <h1 class="text-white">
-                <span>This project uses </span>
+                <span>This website was made using </span>
                 <a href="#" class="text-blue-400 underline">these</a>
-                <span> open-source libraries</span>
+                <span> open-source projects</span>
             </h1>
         </div>
     </footer>
