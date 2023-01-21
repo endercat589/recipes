@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <!-- Embed -->
+    <meta content="Endercat's Recipes" property="og:title" />
+    <meta content="some epic recipes made by endercat126" property="og:description" />
+    <meta content="https://endercat589.github.io/recipes/#" property="og:url" />
+    <meta content="https://endercat589.github.io/recipes/images/hero_background.png" property="og:image" />
+    <meta content="#8B5CF6" data-react-helmet="true" name="theme-color" />
+
+    <title>Endercat's Recipes</title>
+
+    <style>
+        .slideshow_responsive {
+            width: 100vw;
+        }
+
+        @media screen and (min-width: 160vh) {
+            .slideshow_responsive {
+                height: 100vh;
+                max-width: 160vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#d0d1cb] flex justify-center align-center items-center w-screen h-screen">
+    <iframe src="./slideshow/index.html" frameborder="0" class="absolute slideshow_responsive max-w-screen max-h-screen aspect-[48/30]"></iframe>
+
+    <div class="absolute slideshow_responsive aspect-[48/30] bg-transparent pointer-events-none">
+        <div class="flex w-full h-full bg-transparent flex-row justify-start items-end p-6">
+            <a href="../beef_curry.html" class=" pointer-events-auto">
+                <i class="text-4xl fa-solid fa-compress text-[#1899f2] hover:scale-[90%] transition-transform duration-200"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

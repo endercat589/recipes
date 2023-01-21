@@ -124,7 +124,7 @@
         </nav> -->
     </header>
     
-    <section id="hero" class="transition-all duration-500 max-w-screen flex h-48 md:h-64 drop-shadow-lg bg-center bg-cover bg-[url('../images/hero_bg_beef_curry.png')]">
+    <section id="hero" class="transition-all duration-500 max-w-screen flex h-48 md:h-64 drop-shadow-lg bg-center bg-cover bg-no-repeat bg-gray-600 bg-[url('../images/ai/10.png')] bg-blend-multiply"">
         <!-- Hero text -->
         <div class="flex items-center justify-center w-full">
             <a href="#" title="" class="text-3xl sm:text-5xl font-medium text-white text-center uppercase transition-all duration-500">
@@ -138,12 +138,19 @@
         <h2 class="text-xl">This is a recipe for beef curry, made in an instant pot. It's easy to make and very delicious!</h2>
 
         <!-- slideshow -->
-        <div class="flex w-full max-h-[50vw]">
-            <iframe src="./beef_curry/slideshow/index.html" frameborder="0" class="aspect-[48/35] w-full rounded-lg"></iframe>
+        <div class="flex w-full max-h-[50vw] xl:max-w-[75rem] aspect-[48/30]">
+            <iframe src="./beef_curry/slideshow/index.html" frameborder="0" class="aspect-[48/30] min-w-full rounded-lg"></iframe>
+            <div src="../index.html" frameborder="0" class="ml-[-100%] aspect-[48/30] min-w-full bg-transparent pointer-events-none">
+                <div class="flex w-full h-full bg-transparent flex-row justify-start items-end p-6">
+                    <a href="./beef_curry/fullscreen.html" class=" pointer-events-auto">
+                        <i class="text-4xl fa-solid fa-expand text-[#1899f2] hover:scale-[90%] transition-transform duration-200"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <!-- Images and recipe card -->
-        <div class="flex flex-row justify-between space-x-5">
+        <div class="flex flex-row justify-between space-x-5 xl:max-w-[75rem] xl:w-screen">
             <div class="flex flex-col space-y-5 w-fit">
                 <img src="./beef_curry/1.jpg" alt="" class="rounded-lg">
                 <img src="./beef_curry/2.jpg" alt="" class="rounded-lg">
@@ -186,7 +193,7 @@
         <div class="flex flex-row justify-around">
             <h1 class="text-white">
                 <span>This website was made with </span>
-                <a href="#" class="text-blue-400 underline">these</a>
+                <a href="../about.html#open-source" class="text-blue-400 underline">these</a>
                 <span> open-source projects</span>
             </h1>
         </div>

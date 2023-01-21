@@ -24,7 +24,7 @@
 
 </head>
 <body class="min-w-screen overflow-hidden overflow-y-auto min-h-screen">
-    <header class="flex flex-col sticky top-0 z-50">
+    <header class="flex flex-col sticky top-0 z-50 min-w-screen">
         <!-- navbar -->
         <div class="relative bg-gray-900">
 
@@ -124,7 +124,7 @@
         </nav> -->
     </header>
     
-    <section id="hero" class="transition-all duration-500 max-w-screen flex h-48 md:h-64 drop-shadow-lg bg-center bg-cover bg-[url('./images/hero_bg_about.png')]">
+    <section id="hero" class="transition-all duration-500 max-w-screen flex h-48 md:h-64 drop-shadow-lg bg-center bg-cover bg-no-repeat bg-gray-600 bg-[url('./images/ai/7.png')] bg-blend-multiply"">
         <!-- Hero text -->
         <div class="flex items-center justify-center w-full">
             <a href="#" title="" class="text-3xl sm:text-5xl font-medium text-white text-center uppercase transition-all duration-500">
@@ -134,39 +134,95 @@
     </section>
 
     <section id="content" class="flex flex-col m-8 sm:m-16 text-center space-y-12 xl:items-center min-h-[calc(100vh-16rem-4rem-6rem)]">
-        <a href="./about.html">
+        <a href="./about.html" class="pointer-events-none">
             <div class="flex flex-col sm:flex-row justify-between text-left sm:space-x-0 space-y-8 sm:space-y-0 p-8 rounded-lg hover:bg-gray-100 hover:scale-105 border-violet-300 transition-all duration-500 items-center xl:max-w-[75rem] xl:w-screen">
                 <div class="flex w-64 max-h-72 overflow-hidden rounded-lg">
                     <img class="object-scale-down" src="./images/endercat.png" alt="">
                 </div>
                 <div class="flex flex-col px-8">
-                    <h1 class="text-2xl">Endercat's Recipes</h1>
+                    <h1 class="text-2xl">About Me</h1>
                     <br>
-                    <p>Hello, I'm Endercat. I'm very good at cooking and I make the fanciest feasts. On this website, you will find all my favourite recipes!</p>
+                    <p>Hello, I'm William Blythin, aka Endercat. I'm very good at cooking and I make the fanciest feasts. On this website, you will find all my favourite recipes!</p>
                 </div>
             </div>
         </a>
 
-        <a href="./recipes/beef_curry.html">
-            <div class="flex flex-col sm:flex-row-reverse justify-between text-left sm:space-x-0 space-y-8 sm:space-y-0 p-8 rounded-lg hover:bg-gray-100 hover:scale-105 border-violet-300 transition-all duration-500 items-center xl:max-w-[75rem] xl:w-screen">
+        <a href="./about.html" class="pointer-events-none">
+            <div class="flex flex-col sm:flex-row justify-between text-left sm:space-x-0 space-y-8 sm:space-y-0 p-8 rounded-lg hover:bg-gray-100 hover:scale-105 border-violet-300 transition-all duration-500 items-center xl:max-w-[75rem] xl:w-screen">
                 <div class="flex w-64 max-h-72 overflow-hidden rounded-lg">
-                    <img class="object-scale-down" src="./images/beef_curry.jpg" alt="">
+                    <img class="object-scale-down" src="./images/ai/13.png" alt="">
                 </div>
                 <div class="flex flex-col px-8">
-                    <h1 class="text-2xl">
-                        <span class="px-4 py-2 bg-violet-400 rounded-full" >New!</span>
-                        <span class="mx-2">Beef Curry</span>
-                    </h1>
+                    <h1 class="text-2xl">This Website</h1>
                     <br>
-                    <p>this is epic beef curry and also very very easy to make i eat lot</p>
+                    <p>This website was made for a school project. I might add more recipes in the future if I find any good ones.</p>
+                    <br>
+                    <p>I made this website using mostly open source projects. You can find all the projects I used below.</p>
+                    <br>
+                    <p>This website is also open source, under the MIT license, and you can find the code on github!</p>
                 </div>
             </div>
         </a>
 
-        
+        <h1 id="open-source" class="text-4xl underline">Open Source Projects</h1>
+
+        <div class="flex flex-col items-center">
+            <div class="flex flex-col md:flex-row max-w-screen w-screen mx-8 px-8 justify-around space-y-8 md:space-y-0 md:space-x-8">
+                <a href="https://revealjs.com/" class="flex hover:scale-105 hover:bg-gray-100 rounded-lg w-full md:w-1/2 transition-all duration-500">
+                    <div class="flex p-8 flex-row space-x-8 align-center items-center text-left">
+                        <img src="https://pbs.twimg.com/profile_images/1260911777929400325/_ClbHpsz_400x400.jpg" alt="" class="rounded-lg w-24 h-24 aspect-square">
+                        <div class="flex flex-col align-middle">
+                            <h1 class="flex text-2xl text-center">Reveal.js</h1>
+                            <p class="text-sm text-gray-700">MIT License</p>
+                            <p class="flex-text-base">
+                                The HTML Presentation Framework
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://tailwindcss.com/" class="flex hover:scale-105 hover:bg-gray-100 rounded-lg w-full md:w-1/2 transition-all duration-500">
+                    <div class="flex p-8 flex-row space-x-8 align-center items-center text-left">
+                        <img src="https://avatars.githubusercontent.com/u/67109815" alt="" class="rounded-lg w-24 h-24 aspect-square bg-[#0a111f]">
+                        <div class="flex flex-col align-middle">
+                            <h1 class="flex text-2xl text-center">Tailwind CSS</h1>
+                            <p class="text-sm text-gray-700">MIT License</p>
+                            <p class="flex-text-base">
+                                CSS Framework
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-col md:flex-row max-w-screen w-screen mx-8 px-8 justify-around space-y-8 md:space-y-0 md:space-x-8">
+                <a href="https://revealjs.com/" class="flex hover:scale-105 hover:bg-gray-100 rounded-lg w-full md:w-1/2 transition-all duration-500">
+                    <div class="flex p-8 flex-row space-x-8 align-center items-center text-left">
+                        <img src="./images/ai/14.png" alt="" class="rounded-lg w-24 h-24 aspect-square">
+                        <div class="flex flex-col align-middle">
+                            <h1 class="flex text-2xl text-center">Stable Diffusion</h1>
+                            <p class="text-sm text-gray-700">Creative ML OpenRAIL-M</p>
+                            <p class="flex-text-base">
+                                Open Source Text-to-Image AI
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://inkscape.org/" class="flex hover:scale-105 hover:bg-gray-100 rounded-lg w-full md:w-1/2 transition-all duration-500">
+                    <div class="flex p-8 flex-row space-x-8 align-center items-center text-left">
+                        <img src="https://media.inkscape.org/static/images/inkscape-logo.svg" alt="" class="rounded-lg w-24 h-24 aspect-square p-3 bg-[#e6e6e6]">
+                        <div class="flex flex-col align-middle">
+                            <h1 class="flex text-2xl text-center">Inkscape</h1>
+                            <p class="text-sm text-gray-700">GPL v2</p>
+                            <p class="flex-text-base">
+                                Vector graphics editor
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <footer id="footer" class="w-screen flex flex-col bg-gray-800 h-24 justify-center">
+    <footer id="footer" class="w-screen flex flex-col bg-gray-800 h-24 justify-center max-w-screen">
         <!-- Made with -->
         <div class="flex flex-row justify-center">
             <h1 class="text-white">
@@ -182,7 +238,7 @@
         <div class="flex flex-row justify-around">
             <h1 class="text-white">
                 <span>This website was made using </span>
-                <a href="#" class="text-blue-400 underline">these</a>
+                <a href="#open-source" class="text-blue-400 underline">these</a>
                 <span> open-source projects</span>
             </h1>
         </div>
